@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nari Raksha | Personal Safety</title>
+        <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="nav">
+        <div class="brand">
+          <div class="logo">N</div>
+          <div><b>NARI RAKSHA</b><span>PERSONAL SAFETY COMPANION</span></div>
+        </div>
+        <div class="secure">| Privacy-first demo |</div>
+      </header>
+
+      <section class="hero">
+        <div class="welcome">
+          <div class="eyebrow">CALM WHEN IT MATTERS</div>
+          <h1>Safety should feel<br /><em>simple and easy.</em></h1>
+          <p class="lead">
+            A practical safety companion built around deliberate SOS triggers,
+            quick support actions and clear user control. No scary dashboards.
+            No unnecessary complexity.
+          </p>
+          <div class="pillrow">
+            <span class="pill">♡ Gesture SOS</span
+            ><span class="pill">⌁ Trusted contacts</span
+            ><span class="pill">⌖ Location support</span
+            ><span class="pill">✓ Safety check-in</span>
+          </div>
+        </div>
+        <div class="emergency">
+          <div class="e-top">
+            <span>EMERGENCY ACCESS</span><i class="dot"></i>
+          </div>
+          <button class="sos" id="sos">
+            <i class="ring"></i><strong>Hold for SOS</strong
+            ><small>Keep holding for 1.5 seconds</small>
+          </button>
+          <div class="holdbar"><i id="holdbar"></i></div>
+          <div class="note">Designed to reduce accidental activation</div>
+        </div>
+      </section>
+
+      <section class="dashboard">
+        <div class="card wide">
+          <div class="cardhead">
+            <div>
+              <div class="eyebrow">DISCREET TRIGGER</div>
+              <h2>Draw a V gesture</h2>
+              <p>
+                A deliberate gesture can be easier than finding a button in a
+                stressful moment.
+              </p>
+            </div>
+            <div class="icon">✦</div>
+          </div>
+          <div class="gesture" id="pad">
+            <canvas id="canvas"></canvas>
+            <div class="hint" id="hint">Draw V here</div>
+          </div>
+          <div class="gstatus" id="gstatus">Ready when you are</div>
+        </div>
+
+        <div class="card">
+          <div class="cardhead">
+            <div>
+              <div class="eyebrow">QUICK SUPPORT</div>
+              <h2>Safety tools</h2>
+              <p>Common actions, kept one tap away.</p>
+            </div>
+            <div class="icon">♡</div>
+          </div>
+          <div class="actions">
+            <button class="action" id="contact">
+              <span>👩‍🤝‍👩</span>
+              <div>
+                <b>Trusted contact</b><small>Save a person locally</small>
+              </div>
+              <span class="badge">LOCAL</span>
+            </button>
+            <button class="action" id="loc">
+              <span>📍</span>
+              <div>
+                <b>My location</b><small>Get current coordinates</small>
+              </div>
+              <span class="badge">ON REQUEST</span>
+            </button>
+            <button class="action check" id="check">
+              <span>⏱️</span>
+              <div>
+                <b>Safety check-in</b><small>Start a 5-minute timer</small>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="privacy">
+            <div class="icon">🔒</div>
+            <div>
+              <div class="eyebrow">YOUR CONTROL</div>
+              <h2>Privacy by design</h2>
+              <p>
+                Location is requested only when you choose it. Demo data stays
+                in this browser. Nothing is silently uploaded.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="footer">
+        Nari Raksha • Prototype for demonstration • Emergency services should
+        always be contacted directly in a real emergency.
+      </div>
+    </div>
+
+    <dialog id="dlg">
+      <div class="modalIcon">♡</div>
+      <div class="modalTitle">Emergency mode is ready</div>
+      <p class="modalText" id="dtext">
+        Your deliberate SOS trigger was recognized. You have a short window to
+        cancel before continuing.
+      </p>
+      <div class="count" id="count">5</div>
+      <div class="modalActions">
+        <button class="cancel" id="cancel">Cancel</button
+        ><button class="go" id="go">Continue now</button>
+      </div>
+    </dialog>
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
